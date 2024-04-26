@@ -27,8 +27,8 @@ body {
 }
 
 .disclaimer > button {
-    width: 20%;
-    height: 10%;
+    width: 20vw;
+    height: 10vw;
     font-size: 3vw;
     background: none;
     border-radius: 1rem;
