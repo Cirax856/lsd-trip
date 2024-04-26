@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #212121;
+    color: white;
+}
+
+.colors {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    animation: background-flash 1s linear infinite;
+}
+
+.text-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+}
+
+.text-container > h1 {
+    border: 5px solid white;
+    animation:
+        text-transform 1s ease-in-out infinite,
+        text-color .2s linear infinite,
+        border-color 1s linear infinite;
+}
+
+.flashbang {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    animation: flashbang 2s linear infinite;
+    background-color: white;
+}
+
+.circles > span {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    left: 45vw;
+    top: calc(50vh - 5vw);
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: white;
+    animation:
+        circle-pulse 1s linear infinite,
+        circle-color 1s linear infinite,
+        circle-border-color 1s linear infinite;
+    animation-delay: calc(.2s * var(--i));
+}
+
+/* animations */
+
+@keyframes background-flash {
+    0% { background-color: red; }
+    25% { background-color: green; }
+    50% { background-color: blue; }
+    75% { background-color: magenta; }
+    100% { background-color: red; }
+}
+
+@keyframes text-transform {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(2) rotate(180deg); }
+    100% { transform: scale(1) rotate(360deg); }
+}
+
+@keyframes text-color {
+    0% { color: white; }
+    25% { color: black; }
+    50% { color: white; }
+    75% { color: black; }
+    100% { color: white; }
+}
+
+@keyframes border-color {
+    0% { border-color: magenta; }
+    25% { border-color: red; }
+    50% { border-color: white; }
+    75% { border-color: green; }
+    100% { border-color: magenta; }
+}
+
+@keyframes flashbang {
+    0% { opacity: 1; }
+    20% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes circle-pulse {
+    100% { opacity: 0; transform: scale(10); }
+}
+
+@keyframes circle-color {
+    0% { background-color: magenta; }
+    25% { background-color: red; }
+    50% { background-color: white; }
+    75% { background-color: green; }
+    100% { background-color: magenta; }
+}
