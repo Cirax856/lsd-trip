@@ -3,6 +3,7 @@
     padding: 0;
     overflow: hidden;
     box-sizing: border-box;
+    user-select: none;
 }
 
 body {
@@ -61,6 +62,29 @@ body {
     animation-delay: calc(.2s * var(--i));
 }
 
+.back {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    font-size: 1vw;
+    width: 5vw;
+    height: 3vw;
+    background: none;
+    border-radius: 1rem;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    transition: background-color .2s;
+    transition: transform 1s;
+    animation: button-color 2s linear infinite;
+    cursor: pointer;
+}
+
+.back:hover {
+    transform: scale(3) translateX(2rem) translateY(-1rem);
+    animation: button-color 2s linear infinite, button-hover 1s linear infinite;
+}
+
 /* animations */
 
 @keyframes background-flash {
@@ -105,6 +129,21 @@ body {
 }
 
 @keyframes circle-color {
+    0% { background-color: magenta; }
+    25% { background-color: red; }
+    50% { background-color: white; }
+    75% { background-color: green; }
+    100% { background-color: magenta; }
+}
+
+@keyframes button-color {
+    0% { color: black; border-color: black }
+    20% { color: black; border-color: black }
+    50% { color: white; border-color: white }
+    100% { color: white; border-color: white }
+}
+
+@keyframes button-hover {
     0% { background-color: magenta; }
     25% { background-color: red; }
     50% { background-color: white; }

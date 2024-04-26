@@ -3,6 +3,7 @@
     padding: 0;
     overflow: hidden;
     box-sizing: border-box;
+    user-select: none;
 }
 
 body {
@@ -10,9 +11,6 @@ body {
     height: 100vh;
     background-color: #212121;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .disclaimer {
@@ -48,4 +46,10 @@ body {
     left: 1rem;
     bottom: 1rem;
     font-size: 1vw;
+}
+
+.keybinds {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
 }
