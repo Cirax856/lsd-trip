@@ -21,7 +21,8 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    font-size: 2vw;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .disclaimer > button {
@@ -45,11 +46,12 @@ body {
     position: absolute;
     left: 1rem;
     bottom: 1rem;
-    font-size: 1vw;
+    font-size: 1rem;
 }
 
 .keybinds {
     position: absolute;
     left: 1rem;
     top: 1rem;
+    font-size: 1rem;
 }

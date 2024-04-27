@@ -66,9 +66,9 @@ body {
     position: absolute;
     left: 1rem;
     bottom: 1rem;
-    font-size: 1vw;
-    width: 5vw;
-    height: 3vw;
+    font-size: 1rem;
+    width: 5rem;
+    height: 3rem;
     background: none;
     border-radius: 1rem;
     border: 1px solid white;
